@@ -1,0 +1,449 @@
+body {
+  margin: 59px 0 0 0;
+  padding: 0;
+  color: #505459;
+}
+
+/****header css start******/
+
+.navigation_bar {
+  background: #2b3033 !important;
+}
+
+.user_icon {
+  background: url(contact-detail-spirte.png) no-repeat 0 0;
+  height: 44px;
+  width: 30px;
+  float: left;
+  position: relative;
+  top: 3px;
+  right: 7px;
+}
+
+.navigation_bar_a {
+  background: #2b3033 !important;
+  color: #797d80;
+  font-size: 12px;
+  padding-right: 33px !important;
+  &:hover, &:focus {
+    background: #2b3033 !important;
+    color: #fff !important;
+  }
+}
+
+.dropdown_arrow {
+  margin-left: 10px !important;
+}
+
+.dropdown_box {
+  right: 3px !important;
+  top: 72%;
+  border-radius: 4px !important;
+  padding-left: 0 !important;
+}
+
+.dropdown_box_open_arrow {
+  background: url(dropdown_arrow.png) no-repeat;
+  width: 13px;
+  height: 7px;
+  position: absolute;
+  top: -7px;
+  right: 26px;
+  display: block;
+}
+
+.dropdown_a {
+  padding: 10px 50px 10px 20px !important;
+  line-height: 1.829 !important;
+  font-size: 12px;
+}
+
+.dropdown_a_icon {
+  color: #BBBBBB;
+  display: inline-block;
+  float: left;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.dropdown_box > li > a:hover .dropdown_a_icon {
+  color: #fff;
+}
+
+.dropdown_a_text {
+  display: inline-block;
+  padding-left: 15px;
+}
+
+.dropdown_box > li > a {
+  &:hover, &:focus {
+    background: #e69422 !important;
+    color: #fff;
+  }
+}
+
+/****middle container css start******/
+
+.middle_container {
+  margin-top: 0;
+}
+
+/****left sidebar css start****/
+
+.left_sidebar {
+  margin: 0;
+  padding: 0;
+  width: 7.5%;
+  float: left;
+  position: fixed;
+  background: #333;
+  /*  min-height:800px;*/
+  ul {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    li {
+      &:last-child {
+        margin-top: 300px;
+      }
+      margin: 0;
+      padding: 0;
+      float: none;
+      &:hover {
+        background: #e69422 !important;
+      }
+      a {
+        margin: 0;
+        padding: 20px 0;
+        display: block;
+        text-align: center;
+        line-height: 30px;
+        color: #fff;
+        text-decoration: none;
+        font-size: 11px;
+        text-transform: uppercase;
+        &:hover, &:focus {
+          background: none !important;
+          outline: none;
+        }
+      }
+    }
+  }
+}
+
+.navigation-collapse {
+  padding: 0 !important;
+}
+
+.navigation_toggle {
+  border: 1px solid #333333;
+  float: left;
+  margin: 0;
+}
+
+.result {
+  background: url(Nav-sprite.png) no-repeat center 0px;
+  display: block;
+  height: 22px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.customer {
+  background: url(Nav-sprite.png) no-repeat center -31px;
+  height: 26px;
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+}
+
+.review {
+  background: url(Nav-sprite.png) no-repeat center -60px;
+  display: block;
+  height: 24px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.campaigns {
+  background: url(Nav-sprite.png) no-repeat center -89px;
+  display: block;
+  width: 100%;
+  height: 32px;
+  margin: 0 auto;
+}
+
+.appointments {
+  background: url(Nav-sprite.png) no-repeat center -135px;
+  display: block;
+  height: 24px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.settings {
+  background: url(Nav-sprite.png) no-repeat center -173px;
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  height: 30px;
+}
+
+/****right section css start****/
+
+.right_section {
+  padding: 0;
+  width: 91%;
+  float: left;
+  margin-left: 7.5%;
+}
+
+.page_heading {
+  padding: 0;
+  margin-left: 0;
+  ol {
+    background: #fff !important;
+    border-bottom: 1px solid #bfbfbf;
+    border-top: 1px solid #bfbfbf;
+    border-radius: 0;
+    margin-bottom: 0;
+    li {
+      padding: 0 14px;
+      background: url(link_arrow.png) no-repeat right 7px;
+      &:last-child {
+        background: none !important;
+      }
+    }
+    a {
+      color: #4c5459;
+      text-decoration: none;
+    }
+  }
+  > .breadcrumb > li + li:before {
+    content: none !important;
+  }
+}
+
+/*****contact detail page css start*******/
+
+.detail {
+  margin-left: 0 !important;
+}
+
+.contact_detail {
+  margin: 0;
+  padding: 0 0 110px 67px;
+  background: #edf0f2;
+  .row {
+    margin: 20px -15px;
+  }
+  h5 {
+    color: #505459;
+  }
+  h6 {
+    color: #85898c;
+  }
+}
+
+.communication_preferences {
+  margin: 0;
+  ul {
+    background: #fff;
+    border: 1px solid #CCCCCC;
+    display: inline-block;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    li {
+      margin: 0;
+      padding: 7px 9px 7px 20px;
+      float: left;
+      border-left: 1px solid #edf0f2;
+      font-size: 12px;
+      color: #2b3033;
+    }
+  }
+}
+
+.ok_icon {
+  font-size: 12px;
+  color: #43a53a;
+  padding-left: 20px;
+}
+
+.sms_close_icon {
+  color: #a63e29;
+  padding-left: 30px !important;
+  line-height: 16px;
+  opacity: 1;
+}
+
+.email_icon {
+  background: url(contact-detail-spirte.png) no-repeat 0px -48px;
+  height: 10px;
+  width: 14px;
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.sms_icon {
+  background: url(contact-detail-spirte.png) no-repeat 0 -64px;
+  height: 12px;
+  width: 14px;
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.direct_mail_icon {
+  background: url(contact-detail-spirte.png) no-repeat 0 -91px;
+  height: 10px;
+  width: 14px;
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.update_btn {
+  background: #43a63a;
+  font-size: 12px;
+  padding: 10px 20px;
+  margin-bottom: 10px;
+}
+
+.activity_row {
+  background: #fafafa;
+  border-bottom: 1px solid #ccc;
+  padding: 15px 0;
+}
+
+.activity_select {
+  height: 27px;
+  width: 76%;
+  border: 1px solid #ccc;
+  margin-left: 5px;
+  border-radius: 3px;
+}
+
+.activity_row h5 {
+  margin-top: 5px !important;
+  padding-left: 30px;
+}
+
+.activity_subrow {
+  padding: 7px 0;
+  border-bottom: 1px solid #F7F7F7;
+}
+
+.activity_email {
+  background: url(contact-detail-spirte.png) no-repeat 0 -125px;
+  width: 32px;
+  height: 32px;
+  display: inline-block;
+}
+
+.activity_email_1 {
+  background: url(contact-detail-spirte.png) no-repeat 0 -306px;
+  width: 32px;
+  height: 32px;
+  display: inline-block;
+}
+
+.activity_review_1 {
+  background: url(contact-detail-spirte.png) no-repeat 0 -266px;
+  width: 32px;
+  height: 32px;
+  display: inline-block;
+}
+
+.activity_purchase {
+  background: url(contact-detail-spirte.png) no-repeat 0 -177px;
+  width: 32px;
+  height: 32px;
+  display: inline-block;
+}
+
+.activity_review {
+  background: url(contact-detail-spirte.png) no-repeat 0 -223px;
+  width: 32px;
+  height: 32px;
+  display: inline-block;
+}
+
+.activity_date {
+  float: right;
+}
+
+.activity_text {
+  display: inline-block;
+  padding-left: 15px;
+}
+
+.activity_subrow h6 {
+  color: #85898c;
+}
+
+@media (min-width: 320px) and (max-width: 700px) {
+  .dropdown_box {
+    background: #fff !important;
+  }
+  .dropdown_box_open_arrow {
+    top: 33px;
+    right: 0;
+    left: 107px;
+  }
+  .left_sidebar {
+    width: 100%;
+    position: relative;
+    background: none;
+  }
+  .right_section {
+    width: 90%;
+    position: relative;
+    margin-left: 0;
+  }
+  .left_sidebar ul {
+    background: #333;
+    li:last-child {
+      margin-top: 0px;
+    }
+  }
+  .middle_container {
+    padding-left: 14px;
+  }
+  .navigation_toggle {
+    margin-left: 3px;
+  }
+  .contact_detail {
+    padding: 0 0 0 27px;
+  }
+  .activity_row h5 {
+    padding-left: 0;
+  }
+  .activity_date {
+    float: left;
+  }
+}
+
+@media (min-width: 701px) and (max-width: 1024px) {
+  .middle_container {
+    padding-left: 14px;
+  }
+  .left_sidebar {
+    width: 16.3%;
+  }
+  .right_section {
+    width: 83%;
+    margin-left: 16.3%;
+  }
+  .contact_detail {
+    padding: 0 0 110px 20px;
+  }
+  .left_sidebar ul li:last-child {
+    margin-top: 142px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .left_sidebar ul li:last-child {
+    margin-top: 142px;
+  }
+}

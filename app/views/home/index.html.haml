@@ -1,0 +1,260 @@
+%body
+  / ----header start------
+  #slide-nav.navbar.navbar-inverse.navbar-fixed-top.navigation_bar{role: "navigation"}
+    .container-fluid
+      .navbar-header
+        %button.navbar-toggle{"data-target" => "#b-menu-1", "data-toggle" => "collapse", type: "button"}
+          %span.sr-only Toggle navigation
+          %span.icon-bar
+          %span.icon-bar
+          %span.icon-bar
+        %a.navbar-brand{href: "#"}
+          = image_tag("logo.png")
+      #b-menu-1.collapse.navbar-collapse
+        %ul.nav.navbar-nav.navbar-right
+          %li
+            %a.navigation_bar_a{href: "#"} HELP
+          %li.dropdown.active
+            %a.dropdown-toggle.navigation_bar_a{"data-toggle" => "dropdown", href: "#"}
+              %span.user_icon
+              John Doe
+              %b.caret.dropdown_arrow
+            %ul.dropdown-menu.dropdown_box
+              .dropdown_box_open_arrow
+              %li
+                %a.dropdown_a{href: "#"}
+                  %span.dropdown_a_icon y
+                  %span.dropdown_a_text
+                    Preferences
+                    %br>/
+                    Adjust the app to suit your need
+              %li
+                %a.dropdown_a{href: "#"}
+                  %span.dropdown_a_icon A
+                  %span.dropdown_a_text
+                    Account Settings
+                    = succeed "Make" do
+                      %br/
+              %li
+                %a.dropdown_a{href: "#"}
+                  %span.dropdown_a_icon :
+                  %span.dropdown_a_text
+                    Billing
+                    %br>/
+                    Manage credit cards
+              %li
+                %a.dropdown_a{href: "#"}
+                  %span.dropdown_a_icon Q
+                  %span.dropdown_a_text Logout
+  / -----header end----
+  .clearfix
+  / --Middle container Start-----
+  .container-fluid.middle_container
+    .row
+      / -----left sidebar start----
+      .left_sidebar
+        %nav.navbar
+          .navbar-header
+            %button.navbar-toggle.navigation_toggle{"data-target" => "#b-menu-2", "data-toggle" => "collapse", type: "button"}
+              %span.sr-only Toggle navigation
+              %span.icon-bar
+              %span.icon-bar
+              %span.icon-bar
+          #b-menu-2.collapse.navbar-collapse.navigation-collapse
+            %ul.nav.navbar-nav
+              %li
+                %a{href: "#"}
+                  %i.result
+                  %span Result
+              %li
+                %a{href: "#"}
+                  %i.customer
+                  %span customer
+              %li
+                %a{href: "#"}
+                  %i.review
+                  %span Reviews
+              %li
+                %a{href: "#"}
+                  %i.campaigns
+                  %span Campaigns
+              %li
+                %a{href: "#"}
+                  %i.appointments
+                  %span Appointments
+              %li
+                %a{href: "#"}
+                  %i.settings
+                  %span Settings
+      / -----left sidebar end----
+      / -----right section start----
+      .right_section
+        .row.page_heading
+          %ol.breadcrumb
+            %li
+              %a{href: "#"} Acme Enterprise
+            %li
+              %a{href: "#"} Contacts
+            %li.active Contact Detail
+        / ---contact detail page start----
+        .row.detail
+          .col-md-5.col-xs-12.col-sm-6.contact_detail
+            .row
+              .col-md-12.col-xs-12.col-sm-12
+                %h5 CONTACT DETAILS
+            .row
+              .col-md-6.col-xs-6.col-sm-6
+                %h6 First Name
+                %h5 John Michael
+              .col-md-6.col-xs-6.col-sm-6
+                %h6 Last Name
+                %h5 Vincent Doe
+            .row
+              .col-md-6.col-xs-12.col-sm-12
+                %h6 Email
+                %h5 john.vincent.doe@me.com
+              .col-md-6.col-xs-6.col-sm-6
+            .row
+              .col-md-6.col-xs-6.col-sm-6
+                %h6 Phone Number
+                %h5 (888) 555-6677-8899
+              .col-md-6.col-xs-6.col-sm-6
+                %h6 Mobile Phone Number
+                %h5 999) 222-3344-5566
+            .row
+              .col-md-6.col-xs-6.col-sm-6
+                %h6 Address 1
+                %h5 333 Battery Street
+              .col-md-6.col-xs-6.col-sm-6
+                %h6 Address 2
+                %h5 333 Battery Street
+            .row
+              .col-md-6.col-xs-6.col-sm-6
+                %h6 City
+                %h5 San Francisco
+              .col-md-6.col-xs-6.col-sm-6
+                %h6 States
+                %h5 California
+            .row
+              .col-md-6.col-xs-6.col-sm-6
+                %h6 Zip
+                %h5 94111
+              .col-md-6.col-xs-6.col-sm-6
+                %h6 Country
+                %h5 United States
+            .row
+              .col-md-12.col-xs-12.col-sm-12
+                %h6 Communication Preferences
+            .row
+              .col-md-12.col-xs-12.col-sm-12.communication_preferences
+                %ul
+                  %li
+                    %span.email_icon
+                    Email
+                    %span.glyphicon.glyphicon-ok.ok_icon
+                  %li
+                    %span.sms_icon
+                    SMS
+                    %button.close.sms_close_icon{"aria-hidden" => "true", type: "button"} ×
+                  %li
+                    %span.direct_mail_icon
+                    Direct Mail
+                    %span.glyphicon.glyphicon-ok.ok_icon
+            %button.btn.btn-success.update_btn
+              %b UPDATE CONTACT
+          .col-md-7.col-xs-12.col-sm-6
+            .row.activity_row
+              .col-md-9.col-xs-4.col-sm-4
+                %h5 ACTIVITY
+              .col-md-3.col-xs-8.col-sm-8
+                %span
+                  %small Show
+                %span
+                  %select.activity_select
+                    %option All
+                    %option 1
+                    %option 2
+            .row.activity_subrow
+              .col-md-9.col-xs-12.col-sm-12
+                %span.activity_email
+                %span.activity_text
+                  %h6 Email
+                  %h5 Wrote an Email
+              .col-md-3.col-xs-12.col-sm-12
+                %h6.activity_date Tue, Oct 8 9.32 AM
+            .row.activity_subrow
+              .col-md-9.col-xs-12.col-sm-12
+                %span.activity_purchase
+                %span.activity_text
+                  %h6 Purchase
+                  %h5 Made a purchase
+              .col-md-3.col-xs-12.col-sm-12
+                %h6.activity_date Mon, Oct 7 11.32 AM
+            .row.activity_subrow
+              .col-md-9.col-xs-12.col-sm-12
+                %span.activity_review
+                %span.activity_text
+                  %h6 Review
+                  %h5 Sent in a handwritten review
+              .col-md-3.col-xs-12.col-sm-12
+                %h6.activity_date Sun, Oct 6 3.27 PM
+            .row.activity_subrow
+              .col-md-9.col-xs-12.col-sm-12
+                %span.activity_purchase
+                %span.activity_text
+                  %h6 Purchase
+                  %h5 John purchased a service worth $25
+              .col-md-3.col-xs-12.col-sm-12
+                %h6.activity_date Sat, Oct 5 09.32 AM
+            .row.activity_subrow
+              .col-md-9.col-xs-12.col-sm-12
+                %span.activity_email
+                %span.activity_text
+                  %h6 Email
+                  %h5 John sent an email to Jane
+              .col-md-3.col-xs-12.col-sm-12
+                %h6.activity_date Fri, Oct 4 09.32 AM
+            .row.activity_subrow
+              .col-md-9.col-xs-12.col-sm-12
+                %span.activity_review_1
+                %span.activity_text
+                  %h6 Review
+                  %h5 Wrote a review on the web
+              .col-md-3.col-xs-12.col-sm-12
+                %h6.activity_date Thu, Oct 3 09.32 AM
+            .row.activity_subrow
+              .col-md-9.col-xs-12.col-sm-12
+                %span.activity_review
+                %span.activity_text
+                  %h6 Review
+                  %h5 Sent in a handwritten review
+              .col-md-3.col-xs-12.col-sm-12
+                %h6.activity_date Wed, Oct 2 09.32 AM
+            .row.activity_subrow
+              .col-md-9.col-xs-12.col-sm-12
+                %span.activity_purchase
+                %span.activity_text
+                  %h6 Purchase
+                  %h5 John purchased a service worth $25
+              .col-md-3.col-xs-12.col-sm-12
+                %h6.activity_date Tue, Oct 1 09.32 AM
+            .row.activity_subrow
+              .col-md-9.col-xs-12.col-sm-12
+                %span.activity_email_1
+                %span.activity_text
+                  %h6 Mail
+                  %h5 Received direct mail
+              .col-md-3.col-xs-12.col-sm-12
+                %h6.activity_date Mon, Sep 30 09.32 AM
+            .row.activity_subrow
+              .col-md-9.col-xs-12.col-sm-12
+                %span.activity_review
+                %span.activity_text
+                  %h6 Review
+                  %h5 John wrote a review
+              .col-md-3.col-xs-12.col-sm-12
+                %h6.activity_date Sun, Sep 29 09.32 AM
+        / ---contact detail page end----
+      / -----right section end----
+  / --Middle container end-----
+
