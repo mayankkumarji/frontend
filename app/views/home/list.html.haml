@@ -1,0 +1,274 @@
+%body
+  / -header start
+  #slide-nav.navbar.navbar-inverse.navbar-fixed-top.navigation_bar{role: "navigation"}
+    .container-fluid
+      .navbar-header
+        %button.navbar-toggle{"data-target" => "#b-menu-1", "data-toggle" => "collapse", type: "button"}
+          %span.sr-only Toggle navigation
+          %span.icon-bar
+          %span.icon-bar
+          %span.icon-bar
+        %a.navbar-brand{href: "#"}
+          = image_tag("logo.png")
+      #b-menu-1.collapse.navbar-collapse
+        %ul.nav.navbar-nav.navbar-right
+          %li
+            %a.navigation_bar_a{href: "#"} HELP
+          %li.dropdown.active
+            %a.dropdown-toggle.navigation_bar_a{"data-toggle" => "dropdown", href: "#"}
+              %span.user_icon
+              John Doe
+              %b.caret.dropdown_arrow
+            %ul.dropdown-menu.dropdown_box
+              .dropdown_box_open_arrow
+              %li
+                %a.dropdown_a{href: "#"}
+                  %span.dropdown_a_icon y
+                  %span.dropdown_a_text
+                    Preferences
+                    %br>/
+                    Adjust the app to suit your need
+              %li
+                %a.dropdown_a{href: "#"}
+                  %span.dropdown_a_icon A
+                  %span.dropdown_a_text
+                    Account Settings
+                    = succeed "Make" do
+                      %br/
+              %li
+                %a.dropdown_a{href: "#"}
+                  %span.dropdown_a_icon :
+                  %span.dropdown_a_text
+                    Billing
+                    %br>/
+                    Manage credit cards
+              %li
+                %a.dropdown_a{href: "#"}
+                  %span.dropdown_a_icon Q
+                  %span.dropdown_a_text Logout
+  / -header end
+  .clearfix
+  / -Middle container Start
+  .container-fluid.middle_container
+    .row
+      / -left sidebar start
+      .left_sidebar
+        %nav.navbar
+          .navbar-header
+            %button.navbar-toggle.navigation_toggle{"data-target" => "#b-menu-2", "data-toggle" => "collapse", type: "button"}
+              %span.sr-only Toggle navigation
+              %span.icon-bar
+              %span.icon-bar
+              %span.icon-bar
+          #b-menu-2.collapse.navbar-collapse.navigation-collapse
+            %ul.nav.navbar-nav
+              %li
+                %a{href: "#"}
+                  %i.result
+                  %span Result
+              %li
+                %a{href: "#"}
+                  %i.customer
+                  %span customer
+              %li
+                %a{href: "#"}
+                  %i.review
+                  %span Reviews
+              %li
+                %a{href: "#"}
+                  %i.campaigns
+                  %span Campaigns
+              %li
+                %a{href: "#"}
+                  %i.appointments
+                  %span Appointments
+              %li
+                %a{href: "#"}
+                  %i.settings
+                  %span Settings
+      / -left sidebar end
+      / -right section start
+      .right_section
+        .row.page_heading
+          %ol.breadcrumb
+            %li
+              %a{href: "#"} Acme Enterprise
+            %li
+              %a{href: "#"} Contacts
+            %li.active Contact Detail
+        / -List page content start
+        .row.list_top_row
+          .col-md-2.col-sm-2.col-xs-12 Select All
+          .col-md-4.col-sm-4.col-xs-12
+            .row
+              .col-md-4.col-sm-4.col-xs-12 Actions with selected
+              .col-md-8.col-sm-8.col-xs-12
+                %select
+                  %option Enable Referral Request
+                  %option
+          .col-md-4.col-sm-4.col-xs-12
+            .row
+              .col-md-2.col-sm-2.col-xs-12 Sort by
+              .col-md-8.col-sm-8.col-xs-12
+                %select
+                  %option Calls - Reviewed to Requested
+                  %option
+          .col-md-2.col-sm-2.col-xs-12.list_top_search_box
+            %input.col-md-12.col-sm-12.col-xs-12{type: "text", value: ""}/
+        .table-responsive.row.list_table_first_row
+          %table.table
+            %thead
+              %tr
+                %th
+                  %a{href: "#"} Name
+                %th Email
+                %th Phone
+                %th{colspan: "2"} Status
+            %tbody
+              %tr
+                %td John Michael Vincent Doe
+                %td john.vincent.doe@me.com
+                %td (888) 555-6677-8899
+                %td Reviewed 28 Aug 2013
+                %td
+                  .row
+                    .col-md-3.col-sm-2.col-xs-3
+                      .icon_dot
+                    .col-md-3.col-sm-2.col-xs-3
+                      .icon_dot
+                    .col-md-3.col-sm-2.col-xs-3
+                      .icon_dot
+                    .col-md-3.col-sm-2.col-xs-3
+                      .icon_dot
+              %tr
+                %td Jane Michelle Valentine Doe
+                %td jane.valentine.doe@me.com
+                %td (444) 222-3344-5566
+                %td Invite sent 17 Sep 2013
+                %td
+                  .row
+                    .col-md-3.col-sm-2.col-xs-3
+                      .icon_dot
+                    .col-md-3.col-sm-2.col-xs-3
+                      .icon_dot
+                    .col-md-3.col-sm-2.col-xs-3
+                      .icon_dot
+                    .col-md-3.col-sm-2.col-xs-3
+                      .icon_dot
+              %tr
+                %td John Michael Vincent Doe
+                %td john.vincent.doe@me.com
+                %td (888) 555-6677-8899
+                %td Reviewed 28 Aug 2013
+                %td
+                  .row
+                    .col-md-3.col-sm-2.col-xs-3
+                      %a{href: "#"}
+                        = image_tag("phone-icon.png")
+                    .col-md-3.col-sm-2.col-xs-3
+                      %a{href: "#"}
+                        = image_tag("mail-icon.png")
+                    .col-md-3.col-sm-2.col-xs-3
+                      %a{href: "#"}
+                        = image_tag("user-icon.png")
+                    .col-md-3.col-sm-2.col-xs-3
+                      %a{href: "#"}
+                        = image_tag("timer-icon.png")
+              %tr
+                %td Jane Michelle Valentine Doe
+                %td jane.valentine.doe@me.com
+                %td (444) 222-3344-5566
+                %td Invite sent 17 Sep 2013
+                %td
+                  .row
+                    .col-md-3.col-sm-2.col-xs-3
+                      .icon_dot
+                    .col-md-3.col-sm-2.col-xs-3
+                      .icon_dot
+                    .col-md-3.col-sm-2.col-xs-3
+                      .icon_dot
+                    .col-md-3.col-sm-2.col-xs-3
+                      .icon_dot
+              %tr
+                %td John Michael Vincent Doe
+                %td john.vincent.doe@me.com
+                %td (888) 555-6677-8899
+                %td Reviewed 28 Aug 2013
+                %td
+                  .row
+                    .col-md-3.col-sm-2.col-xs-3
+                      .icon_dot
+                    .col-md-3.col-sm-2.col-xs-3
+                      .icon_dot
+                    .col-md-3.col-sm-2.col-xs-3
+                      %a{href: "#"}
+                        = image_tag("user-icon.png")
+                    .col-md-3.col-sm-2.col-xs-3
+                      %a{href: "#"}
+                        = image_tag("timer-icon.png")
+              %tr
+                %td Jane Michelle Valentine Doe
+                %td jane.valentine.doe@me.com
+                %td (444) 222-3344-5566
+                %td Invite sent 17 Sep 2013
+                %td
+                  .row
+                    .col-md-3.col-sm-2.col-xs-3
+                      .icon_dot
+                    .col-md-3.col-sm-2.col-xs-3
+                      .icon_dot
+                    .col-md-3.col-sm-2.col-xs-3
+                      %a{href: "#"}
+                        = image_tag("user-icon.png")
+                    .col-md-3.col-sm-2.col-xs-3
+                      .icon_dot
+              %tr
+                %td John Michael Vincent Doe
+                %td john.vincent.doe@me.com
+                %td (888) 555-6677-8899
+                %td Reviewed 28 Aug 2013
+                %td
+                  .row
+                    .col-md-3.col-sm-2.col-xs-3
+                      .icon_dot
+                    .col-md-3.col-sm-2.col-xs-3
+                      .icon_dot
+                    .col-md-3.col-sm-2.col-xs-3
+                      .icon_dot
+                    .col-md-3.col-sm-2.col-xs-3
+                      %a{href: "#"}
+                        = image_tag("timer-icon.png")
+              %tr
+                %td Jane Michelle Valentine Doe
+                %td jane.valentine.doe@me.com
+                %td (444) 222-3344-5566
+                %td Invite sent 17 Sep 2013
+                %td
+                  .row
+                    .col-md-3.col-sm-2.col-xs-3
+                      .icon_dot
+                    .col-md-3.col-sm-2.col-xs-3
+                      .icon_dot
+                    .col-md-3.col-sm-2.col-xs-3
+                      %a{href: "#"}
+                        = image_tag("user-icon.png")
+                    .col-md-3.col-sm-2.col-xs-3
+                      .icon_dot
+              %tr
+                %td John Michael Vincent Doe
+                %td john.vincent.doe@me.com
+                %td (888) 555-6677-8899
+                %td Reviewed 28 Aug 2013
+                %td
+                  .row
+                    .col-md-3.col-sm-2.col-xs-3
+                      .icon_dot
+                    .col-md-3.col-sm-2.col-xs-3
+                      .icon_dot
+                    .col-md-3.col-sm-2.col-xs-3
+                      .icon_dot
+                    .col-md-3.col-sm-2.col-xs-3
+                      .icon_dot
+        / -List page content end
+      / -right section end
+  / -Middle container end

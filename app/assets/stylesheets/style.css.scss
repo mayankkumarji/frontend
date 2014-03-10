@@ -96,8 +96,8 @@ body {
   width: 7.5%;
   float: left;
   position: fixed;
-  background: #333;
-  /*  min-height:800px;*/
+  background: #3f474d;
+  min-height: 100%;
   ul {
     margin: 0;
     padding: 0;
@@ -133,6 +133,7 @@ body {
 
 .navigation-collapse {
   padding: 0 !important;
+  max-height: none;
 }
 
 .navigation_toggle {
@@ -189,13 +190,13 @@ body {
   height: 30px;
 }
 
-/****right section css start****/
+/****  right section css start  ****/
 
 .right_section {
-  padding: 0;
-  width: 91%;
+  padding: 0 0 0 7.5%;
+  width: 99%;
   float: left;
-  margin-left: 7.5%;
+  margin: 0;
 }
 
 .page_heading {
@@ -445,5 +446,192 @@ body {
 @media (min-width: 1000px) {
   .left_sidebar ul li:last-child {
     margin-top: 142px;
+  }
+}
+
+/* ==== Overlay page css start ==== */
+
+#update_contact_underlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  opacity: 0.5;
+  filter: alpha(opacity = 50);
+  z-index: 99;
+}
+
+#update_contact_lightbox {
+  display: none;
+  position: absolute;
+  top: 100px;
+  left: 25%;
+  width: 45%;
+  height: auto;
+  background-color: #fff;
+  z-index: 99;
+  border: #676b6c solid 2px;
+  border-radius: 6px;
+  padding-bottom: 25px;
+  .row {
+    margin: 0;
+  }
+}
+
+.update_contact_top_heading {
+  min-height: 50px;
+  background-color: #41484c;
+  color: #fff;
+  padding: 1% 4%;
+  line-height: 50px;
+  border-radius: 3px 3px 0 0;
+}
+
+#update_contact_lightbox {
+  a.close_btn {
+    background: url("close.png") no-repeat;
+    width: 14px;
+    height: 14px;
+    display: block;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+  }
+  .main_row {
+    margin: 10px 0;
+    color: #393c40;
+    font-size: 12px;
+    padding: 0 5%;
+    line-height: 20px;
+    .text-right {
+      padding-top: 10px;
+    }
+    span {
+      color: #717a80;
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+    hr {
+      position: relative;
+      top: -10px;
+      background: #f0f1f2;
+    }
+  }
+  input[type="text"] {
+    border: #c8cacc solid 1px;
+    border-radius: 5px;
+    min-height: 27px;
+    color: #393c40;
+    font-size: 12px;
+    padding: 0 5%;
+    margin: 10px 0;
+    &:focus {
+      border-color: #4795cc;
+    }
+  }
+  select {
+    width: 100%;
+    min-height: 27px;
+    color: #393c40;
+    font-size: 12px;
+    padding: 10px 5%;
+    border: #c8cacc solid 1px;
+    border-radius: 5px;
+  }
+}
+
+@media (min-width: 701px) and (max-width: 1000px) and (orientation: portrait) {
+  #update_contact_lightbox {
+    width: 70%;
+    .main_row {
+      font-size: 11px;
+    }
+  }
+}
+
+@media (min-width: 320px) and (max-width: 700px) {
+  #update_contact_lightbox {
+    width: 100%;
+    left: 5%;
+  }
+}
+
+/* === List page css start ==== */
+
+.list_top_row {
+  background-color: #fcfcfc;
+  border-bottom: #d7d7d9 solid 1px;
+  min-height: 37px;
+  margin-left: 0;
+  padding: 10px 0;
+  color: #393c40;
+  line-height: 28px;
+  input[type="text"] {
+    background: url("search-icon.png") no-repeat 5px 5px;
+    min-height: 22px;
+    border: #d2d2d2 solid 1px;
+    border-radius: 5px;
+    padding-left: 20px;
+  }
+  select {
+    border: #d2d2d2 solid 1px;
+    border-radius: 5px;
+    padding: 5px 5px;
+    width: 100%;
+  }
+}
+
+.list_table_first_row {
+  margin-left: 0;
+  table {
+    margin: 0;
+    tr th {
+      border-bottom: 1px solid #DDDDDD;
+      background-color: #f7f7f7;
+      a {
+        background: url("link-arrow.png") no-repeat right 8px;
+        padding: 0 15px 0 5px;
+        color: #393c40;
+        text-decoration: none;
+        &:hover {
+          background: url("link-arrow.png") no-repeat right 8px;
+          padding: 0 15px 0 5px;
+          color: #393c40;
+          text-decoration: none;
+        }
+      }
+    }
+    tbody tr {
+      td {
+        padding: 12px 8px;
+      }
+      &:last-child {
+        border-bottom: 1px solid #DDDDDD;
+      }
+      &:hover {
+        background-color: #fffcf2;
+      }
+    }
+  }
+}
+
+.icon_dot {
+  width: 8px;
+  height: 8px;
+  background-color: #e1e3e6;
+  border-radius: 10px;
+  margin-top: 5px;
+}
+
+.list_table_first_row .col-sm-2 {
+  min-height: 20px;
+}
+
+@media (min-width: 320px) and (max-width: 700px) {
+  .list_top_row select {
+    margin: 10px 0;
   }
 }

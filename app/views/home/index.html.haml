@@ -1,5 +1,5 @@
 %body
-  / ----header start------
+  / -header start
   #slide-nav.navbar.navbar-inverse.navbar-fixed-top.navigation_bar{role: "navigation"}
     .container-fluid
       .navbar-header
@@ -46,12 +46,12 @@
                 %a.dropdown_a{href: "#"}
                   %span.dropdown_a_icon Q
                   %span.dropdown_a_text Logout
-  / -----header end----
+  / -header end
   .clearfix
-  / --Middle container Start-----
+  / -Middle container Start
   .container-fluid.middle_container
     .row
-      / -----left sidebar start----
+      / -left sidebar start
       .left_sidebar
         %nav.navbar
           .navbar-header
@@ -86,9 +86,9 @@
                 %a{href: "#"}
                   %i.settings
                   %span Settings
-      / -----left sidebar end----
-      / -----right section start----
-      .right_section
+      / -left sidebar end
+      / -right section start
+      .right_section.row
         .row.page_heading
           %ol.breadcrumb
             %li
@@ -96,7 +96,7 @@
             %li
               %a{href: "#"} Contacts
             %li.active Contact Detail
-        / ---contact detail page start----
+        / -contact detail page start
         .row.detail
           .col-md-5.col-xs-12.col-sm-6.contact_detail
             .row
@@ -160,8 +160,77 @@
                     %span.direct_mail_icon
                     Direct Mail
                     %span.glyphicon.glyphicon-ok.ok_icon
-            %button.btn.btn-success.update_btn
+            %a.btn.btn-success.update_btn{href: "#", onclick: "document.getElementById('update_contact_underlay').style.display='block'; document.getElementById('update_contact_lightbox').style.display='block';"}
               %b UPDATE CONTACT
+          / - UPDATE CONTACT lightbox content start
+          #update_contact_underlay{onclick: "document.getElementById('update_contact_underlay').style.display='none'; document.getElementById('update_contact_lightbox').style.display='none';"}
+          #update_contact_lightbox
+            %a.close_btn{href: "#", onclick: "document.getElementById('update_contact_underlay').style.display='none'; document.getElementById('update_contact_lightbox').style.display='none';"}
+            .row.update_contact_top_heading
+              %h5 UPDATE CONTACT
+            .row.main_row
+              .col-md-3.col-sm-3.col-xs-6.text-right First Name
+              .col-md-3.col-sm-3.col-xs-5
+                %input.col-md-12{type: "text", value: "John Michael"}/
+              .col-md-3.col-sm-3.col-xs-6.text-right Last Name
+              .col-md-3.col-sm-3.col-xs-5
+                %input.col-md-12{type: "text", value: "Vincent Doe"}/
+            .row.main_row
+              .col-md-5.col-sm-5.col-xs-4.text-right
+                %span CONTACT
+              .col-md-7.col-sm-7.col-xs-8.text-right
+                %hr/
+            .row.main_row
+              .col-md-3.col-sm-3.col-xs-6.text-right Email
+              .col-md-8.col-sm-8.col-xs-5
+                %input.col-md-12{type: "text", value: "john.vincent.doe@me.com"}/
+              .col-md-1.col-sm-1.col-xs-12
+            .row.main_row
+              .col-md-3.col-sm-3.col-xs-6.text-right Phone Number
+              .col-md-3.col-sm-3.col-xs-5
+                %input.col-md-10{type: "text", value: "(510) 230-0588"}/
+              .col-md-3.col-sm-3.col-xs-6.text-right Mobile Phone Number
+              .col-md-3.col-sm-3.col-xs-5
+                %input.col-md-10{type: "text", value: "(510) 230-0588"}/
+            .row.main_row
+              .col-md-5.col-sm-5.col-xs-4.text-right
+                %span ADDRESS
+              .col-md-7.col-sm-7.col-xs-8.text-right
+                %hr/
+            .row.main_row
+              .col-md-3.col-sm-3.col-xs-6.text-right Line1
+              .col-md-4.col-sm-4.col-xs-5
+                %input.col-md-12{type: "text", value: "2020 Milvia St. #400"}/
+              .col-md-1.col-sm-1.col-xs-6.text-right Line2
+              .col-md-4.col-sm-4.col-xs-5
+                %input.col-md-12{type: "text", value: "S"}/
+            .row.main_row
+              .col-md-3.col-sm-3.col-xs-6.text-right City
+              .col-md-4.col-sm-4.col-xs-5
+                %input.col-md-12{type: "text", value: "Berkeley"}/
+              .col-md-1.col-sm-1.col-xs-6.text-right State
+              .col-md-4.col-sm-4.col-xs-5
+                %select
+                  %option California
+                  %option India
+                  %option Bharat
+            .row.main_row
+              .col-md-3.col-sm-3.col-xs-6.text-right Zip
+              .col-md-4.col-sm-4.col-xs-5
+                %input.col-md-8{type: "text", value: "94704"}/
+              .col-md-1.col-sm-1.col-xs-6.text-right Country
+              .col-md-4.col-sm-4.col-xs-5
+                %select
+                  %option United States
+                  %option India
+                  %option Bharat
+            .row.main_row
+              .col-md-3.col-sm-3.col-xs-6.text-right
+              .col-md-3.col-sm-4.col-xs-6
+                %button.btn.btn-success.col-md-12
+                  %b SAVE
+              .col-md-5.col-sm-5.col-xs-12.text-right
+          / - UPDATE CONTACT lightbox content End
           .col-md-7.col-xs-12.col-sm-6
             .row.activity_row
               .col-md-9.col-xs-4.col-sm-4
@@ -254,7 +323,6 @@
                   %h5 John wrote a review
               .col-md-3.col-xs-12.col-sm-12
                 %h6.activity_date Sun, Sep 29 09.32 AM
-        / ---contact detail page end----
-      / -----right section end----
-  / --Middle container end-----
-
+        / -contact detail page end
+      / -right section end
+  / -Middle container end
